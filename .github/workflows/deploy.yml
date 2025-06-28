@@ -45,5 +45,5 @@ jobs:
             - name: Hola mundo
               run: echo "Hola mundo ${{github.ref}}"
 
-            - name: Hola mundo
+            - name: Variable salida entre jobs
               run: echo "$salida"
