@@ -12,7 +12,6 @@ jobs:
 
         steps:
             - name: Working dir
-              id: step_1
               run: ls -al
 
             - name: Action
@@ -25,6 +24,7 @@ jobs:
               run: echo $GITHUB_OUTPUT
 
             - name: Save variable in git file
+              id: step_1
               run: echo "my_variable=Hola mundo" >> $GITHUB_OUTPUT
 
             - name: Get message variable
