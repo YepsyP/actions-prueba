@@ -61,4 +61,15 @@ jobs:
               with:
                 name: archivo-saludo-test
                 path: test.log
-                
+    
+    four_jod:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Descargar artefacto
+              uses: actions/download-artefact@v4
+              with:
+                name: archivo-saludo-test
+            
+            - name: Cat file
+              run: cat test.log
