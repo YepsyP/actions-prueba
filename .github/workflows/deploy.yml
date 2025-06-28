@@ -47,3 +47,18 @@ jobs:
 
             - name: Variable salida entre jobs
               run: echo "$SALIDA"
+
+    three_jod:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Generar archivo
+              run: |
+               echo "Archivo prueba, hola" >> test.log
+
+            - name: Subir artefacto
+              uses: actions/upload-artifact@v4
+              with:
+                name: archivo-saludo-test
+                path: test.log
+                
