@@ -8,7 +8,7 @@ jobs:
 
         steps:
             - name: Hola mundo
-              run: echo "Hola mundo"
+              run: cat hola.php
             
     second_job:
         needs: firts_job
