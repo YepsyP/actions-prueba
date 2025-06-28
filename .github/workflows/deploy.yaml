@@ -9,3 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hacemos pull del codigo"
+      - run: echo "Correr migraciones"
+      - run: echo "Publicar versiones"
+      - run: echo "Publicar version master"
