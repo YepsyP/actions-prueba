@@ -4,14 +4,21 @@ on: push
 
 jobs:
     firts_job:
+        name: Test utilizando Action
         runs-on: ubuntu-latest
 
         env:
             NAME: PruebaENV
 
         steps:
-            - name: Hola mundo
-              run: echo "Hola mundo $NAME"
+            - name: Working dir
+              run: ls -al
+
+            - name: Action
+              uses: actions/checkout@v4
+
+            - name: Working dir after action
+              run: ls -al
             
     second_job:
         if: ${{ github.ref == 'refs/heads/master' }}
