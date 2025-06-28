@@ -48,7 +48,7 @@ jobs:
             - name: Variable salida entre jobs
               run: echo "$SALIDA"
 
-    three_jod:
+    three_job:
         runs-on: ubuntu-latest
 
         steps:
@@ -62,8 +62,9 @@ jobs:
                 name: archivo-saludo-test
                 path: test.log
     
-    four_jod:
+    four_job:
         runs-on: ubuntu-latest
+        needs: three_job
 
         steps:
             - name: Descargar artefacto
