@@ -19,6 +19,9 @@ jobs:
 
             - name: Working dir after action
               run: ls -al
+
+            - name: Variable git
+              run: echo $GITHUB_OUTPUT
             
     second_job:
         if: ${{ github.ref == 'refs/heads/master' }}
