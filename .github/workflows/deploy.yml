@@ -25,7 +25,7 @@ jobs:
               run: echo $GITHUB_OUTPUT
 
             - name: Save variable in git file
-              run: echo "my_variable=Hola mundo" >> GITHUB_OUTPUT
+              run: echo "my_variable=Hola mundo" >> $GITHUB_OUTPUT
 
             - name: Get message variable
               run: echo "{{ steps.step_1.outputs.my_variable }}"
